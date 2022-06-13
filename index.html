@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML5 - CSS3 Intermédiaire</title>
+    <!--
+        Ici on fera les appels vers les fichiers CSS, mais aussi script JS, etc
+        <link ... => appeler le CSS
+        <script ... => appeler les fichiers JS
+        <style>
+            /* code CSS en page*/
+        </style>
+    -->
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo-batman.svg" alt="Logo Batman SVG" />
+        <h1>Formation HTML5 - CSS3 Intermédiaire</h1>
+    </header>
+    <nav>
+        <ul class="container">
+            <li>
+                <a href="./" title="Retourner à l'accueil du site">
+                    Accueil
+                </a>
+            </li>
+            <li>
+                <a href="./article.html" title="Afficher un article">
+                    Bruce Timm
+                </a>
+            </li>
+            <li>
+                <a href="./contact.html" title="Contactez-nous">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="./css.html" title="Le CSS">
+                    CSS
+                </a>
+            </li>
+            <li>
+                <a href="./cssgrid.html" title="Le CSS en grille : CSS GRID">
+                    CSS GRID
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section>
+            <article>
+                <div>
+                    <header>
+                        <h2>Problèmes CSS courants</h2>
+                    </header>
+                    <main>
+                        <p>
+                            Le calcul par défaut des tailles en CSS est content-box,
+                            il est conseillé de le passer en border-box
+                        </p>
+                        <p>
+                            Les tailles calculées : si vous voulez utiliser des cadratin (em),
+                            il est plus sûr d'utiliser les cadratins racine (rem) car il sont toujours
+                            calculés par rapport au cadratin racine du user stylesheet
+                            et non pas le cadratin calculé du conteneur.
+                        </p>
+                        <p class="deuxEm">
+                            et <span class="deuxEm">et</span>
+                        </p>
+                        <p class="deuxRem">
+                            et <span class="deuxRem">et</span>
+                        </p>
+                    </main>
+                    <footer>
+                        <a href="">
+                            <button>
+                                Lire la suite
+                            </button>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <header>
+                        <h2>HTML - CSS sur le texte</h2>
+                    </header>
+                    <main>
+                        <p>
+                            Il existe quelques balises pour changer directement l'affichage
+                            du texte en HTML. Un texte <b>en gras</b>, qui n'a pas d'incidence sur
+                            le SEO, <strong>le texte en gras</strong> qui lui à de l'incidence
+                            sur le SEO.
+                        </p>
+                        <p>
+                            Il en est de même pour l'italique : <i>Italique à l'affichage</i>,
+                            Italique
+                            afficher avec une <em>emphase sémantique</em>
+                        </p>
+                        <p class="chevrons">
+                            la balise font <font color="#ff0000">texte</font> n'est plus utilisée.
+                            Maintenant on va généralement
+                            <span class="truc">utliser</span> une balise
+                            <span class="rouge-gras">span associée à une classe</span>.
+                        </p>
+                        <p>
+                            <cite>Une citation</cite>
+                        </p>
+                        <p>
+                            <quote>
+                                <q>I'm Batman</q><br />
+                                <i>Batman</i>
+                            </quote>
+                        </p>
+                        <blockquote>
+                            <q>I'm Batman</q><br />
+                            <i>Batman</i> <i class="fa-solid fa-mask"></i>
+                        </blockquote>
+                    </main>
+                    <footer>
+                        <a href="">
+                            <button>
+                                Lire la suite
+                            </button>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <header>
+                        <h2>HTML - CSS sur le texte</h2>
+                    </header>
+                    <main>
+                        <pre>
+    Lorem ipsum dolor<br />sit amet consectetur 
+    adipisicing elit.
+    Placeat sit maxime velit nostrum rem!&lt;br /&gt; 
+    Eos in alias vel a, corporis
+    quas ea hic sunt beatae itaque totam, 
+    blanditiis exercitationem nostrum.
+                        </pre>
+                        <code>
+                            Lorem ipsum, dolor sit <br />amet consectetur adipisicing elit. Necessitatibus
+                            libero perferendis quaerat maiores quisquam natus? Sunt, molestiae iste ipsam
+                            necessitatibus fuga sapiente, &lt;recusandae&gt; doloribus consectetur odio similique
+                            rem, reiciendis velit!
+                        </code>
+                        <p>
+                            H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                        </p>
+                    </main>
+                    <footer>
+                        <a href="">
+                            <button>
+                                Lire la suite
+                            </button>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <header>
+                        <h2>Plusieurs feuilles de style</h2>
+                    </header>
+                    <main>
+                        <p>
+                            On peut avoir deux feuilles de style pour la même page : 
+                            une qui servira à l'affichage sur écran, et l'autre qui 
+                            servira à l'impression de cette page.
+                        </p>
+                        <p>
+                            Il suffit alors de préciser les éléments de la page 
+                            qu'on ne désir pas voir apparaître lors de l'impression.
+                        </p>
+                        <p>
+                            Il est possible sur le navigateur d'avoir un aperçu de l'impression :
+                            dans la console, faire ctrl + maj + p, puis d'écrire print 
+                            et de sélectionner l'émulation du media print à l'écran
+                        </p>
+                        <p>
+                            pour revenir en arrière, même méthode mais en écrivant screen 
+                            et en sélectionnant l'émulation du média screen.
+                        </p>
+                    </main>
+                    <footer>
+                        <a href="">
+                            <button>
+                                Lire la suite
+                            </button>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <header>
+                        <h2>Les pseudo classe</h2>
+                    </header>
+                    <main>
+                        <p>
+                            il s'agit de complément de sélecteurs css, qui permettent d'intervenir sélectionnantsur un élément précis en série contenu dans un conteneur, soit les énièmes éléments, 
+                            le premier "enfant", le derner, etc.
+                        </p>
+                        <p>
+                            en chaînant ces pseudo classes, il est possible de prévoir des comportement des 
+                            taille de différents éléments selon la largeur d'affichage et le nombre de ses éléments
+                        </p>
+                        <p>
+                            Ici, quand on affche 2 éléments par ligne, si le dernier est égal à un multiple de 2 
+                            plus 1, il prend 100% de la largeur
+                            <pre>
+body > main > section > article:last-child:nth-of-type(2n+1){
+    width: 100%;
+}
+                            </pre>
+                        </p>
+                        <p>
+                            Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3 
+                            plus 1, il prend 100% de la largeur
+                            <pre>
+body > main > section > article:last-child:nth-of-type(3n+1){
+    width: 100%;
+}
+                            </pre>
+                        </p>
+                        <p>
+                            Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3 
+                            plus 2, il prend 66% de la largeur
+                            <pre>
+body > main > section > article:last-child:nth-of-type(3n+2){
+    width: 66%;
+}
+                            </pre>
+                        </p>
+                    </main>
+                    <footer>
+                        <a href="">
+                            <button>
+                                Lire la suite
+                            </button>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="./" title="Retourner à l'accueil du site">
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="./article.html" title="Afficher un article">
+                        Bruce Timm
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact.html" title="Contactez-nous">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="./css.html" title="Le CSS">
+                        CSS
+                    </a>
+                </li>
+                <li>
+                    <a href="./cssgrid.html" title="Le CSS en grille : CSS GRID">
+                        CSS GRID
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                        CGU
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        CGV
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Qui sommes-nous ?
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">
+                        HTML online
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Dawan.fr
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+body > header > img, body > nav, body > footer, body article footer{
+    display: none;
+}

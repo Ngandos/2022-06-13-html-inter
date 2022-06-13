@@ -1,0 +1,199 @@
+/*
+Commentaires en CSS
+
+dafont.com pour les polices gratuites
+convertir les polices et générer un @font-face
+https://everythingfonts.com/font-face
+*/
+@import url("./JMHArkham.css");
+@import url("./all.css");
+
+/*
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+
+si 2em = 32 px, 1em = 16px
+
+*/
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --couleur-texte-generale: black;
+    --bg-header: #222126;
+}
+
+/*  
+ les tailles calculées en CSS
+ de base, en CSS, les tailles des éléments sont calculées sur le contenu, et pas la boîte qui contient
+*/
+
+/* autre déclaration de box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p.chevrons::before,
+.truc::before {
+    content: ">>";
+}
+
+.rouge-gras {
+    font-weight: bold;
+    color: darkred;
+}
+
+body {
+    color: var(--couleur-texte-generale);
+    margin: 0;
+}
+
+body>header {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 10px 2px;
+}
+
+body>header h1 {
+    text-align: right;
+}
+
+body>header,
+body>footer,
+body>nav {
+    background-color: var(--bg-header);
+    color: white;
+}
+
+body>nav ul,
+body>footer ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+body>nav ul li a,
+body>footer ul li a,
+body>nav ul li a:visited,
+body>footer ul li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+body>nav ul li a:hover,
+body>footer ul li a:hover,
+body>nav ul li a:focus,
+body>footer ul li a:focus {
+    color: black;
+    background-color: white;
+}
+
+body>nav>ul {
+    display: flex; /* rend flexible d'affichage à l'intérieur dun conteneur possédant cette proriété CSS */
+    justify-content: space-between; /* permet de justifier l'affichage des éléments à l'intérieur du conteneur */
+    flex-wrap: wrap; /* si la largeur des conteneur mis côte à côté "dépasse" la largeur du conteneur, les éléments sont mis à la ligne */
+    line-height: 2rem;
+}
+
+body>nav>ul li a {
+    display: block;
+    padding: 0 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "JMHArkham";
+}
+
+.deuxEm {
+    font-size: 2em;
+}
+
+.deuxRem {
+    font-size: 2rem;
+}
+
+body>header>img {
+    width: 100px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > main > section > article{
+    width: 100%;
+    padding: 5px;
+}
+
+@media (min-width: 576px) { /* les surcharges de css quand l'affichage dépasse 579px */
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) { /* les surcharges de css quand l'affichage dépasse 768px */
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) { /* les surcharges de css quand l'affichage dépasse 992px */
+    .container {
+        max-width: 960px;
+    }
+
+    body > main > section{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    body > main > section > article{
+        width: 50%;
+    }
+
+    body > main > section > article:last-child:nth-of-type(2n+1){
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1200px) { /* les surcharges de css quand l'affichage dépasse 1200px */
+    .container {
+        max-width: 1140px;
+    }
+
+    body > main > section > article{
+        width: 33%;
+    }
+    
+    body > main > section > article:last-child:nth-of-type(3n+1){
+        width: 100%;
+    }
+
+    body > main > section > article:last-child:nth-of-type(3n+2){
+        width: 66%;
+    }
+}
+
+@media (min-width: 1400px) { /* les surcharges de css quand l'affichage dépasse 1400px */
+    .container {
+        max-width: 1320px;
+    }
+}
