@@ -311,9 +311,96 @@ body > main > section > article:last-child:nth-of-type(3n+2){
                         <h2>Incrustation de vidéos</h2>
                     </header>
                     <main>
+                        <p>
+                            Une vidéo hébergé sur le site avec une seule source
+                        </p>
                         <figure>
-                            
+                            <video controls preload="auto" 
+                            poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" 
+                            >
+                                <source src="./media/Fallout-4-Launch-Trailer.mp4" type="video/mp4" />
+                            </video>
+                            <figcaption>
+                                Vidéo de promo sur la sortie de Fallout 4
+                            </figcaption>
                         </figure>
+                        <p>
+                            Une vidéo hébergé sur le site avec plusieurs sources
+                        </p>
+                        <figure>
+                            <video controls preload="auto">
+                                <source src="./media/Big_Buck_Bunny_360_10s_1MB.mov" type="video/mov" />
+                                <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                                <source src="./media/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                            </video>
+                            <figcaption>
+                                Vidéo test Big buck bunny
+                            </figcaption>
+                        </figure>
+                    </main>
+                    <footer>
+                        <a href="">
+                            <button>
+                                Lire la suite
+                            </button>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <header>
+                        <h2>Vidéos hébergées par un tier</h2>
+                    </header>
+                    <main>
+                        <p>
+                            Des sites tels que Youtube et dailymotion donne la possibilité 
+                            d'incruster leurs vidéos sur nos sites, en utilisant la balise iframe.
+                        </p>
+                        <p>
+                            L'iframe est une balise qui permet d'appeler une page 
+                            d'un autre site (ou du site actuel) dans un cadre délimité.
+                        </p>
+                        <p>
+                            Il faut toutefois que le site ciblé autorise les iframes
+                        </p>
+                        <iframe src="./test.html" width="100%" height="200px"></iframe>
+                        <iframe src="./documents/CRAM.pdf" width="100%" height="200px"></iframe>
+                        <figure class="videoExt">
+                            <iframe src="https://www.youtube.com/embed/1H5g4Mh-G6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </figure>
+                    </main>
+                    <footer>
+                        <a href="">
+                            <button>
+                                Lire la suite
+                            </button>
+                        </a>
+                    </footer>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <header>
+                        <h2>CSS sur les iframe vidéos</h2>
+                    </header>
+                    <main>
+                        <figure class="videoExt">
+                                <iframe frameborder="0" type="text/html" 
+                                src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%" allowfullscreen > </iframe>
+                        </figure>
+                        <p>
+                            on peut aussi incruster du son hébergé
+                        </p>
+                        <figure>
+                            <img src="./images/diablo_02.jpg" 
+                            alt="La place centrale de la ville de Tristram dans le permier diablo" />
+                        </figure>
+                        <figcaption>
+                            <audio controls>
+                                <source src="./media/diablo_town.mp3" type="audio/mp3" />
+                            </audio>
+                        </figcaption>
                     </main>
                     <footer>
                         <a href="">
