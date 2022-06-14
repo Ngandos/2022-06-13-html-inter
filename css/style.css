@@ -55,9 +55,9 @@ body {
     margin: 0;
 }
 
-body>header {
+body>header div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 5px 10px 2px;
 }
 
@@ -125,8 +125,9 @@ h6 {
     font-size: 2rem;
 }
 
-body>header>img {
+body>header > div >img {
     width: 100px;
+    margin: 0;
 }
 
 .container {
