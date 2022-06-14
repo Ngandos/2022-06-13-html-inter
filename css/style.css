@@ -136,6 +136,68 @@ ol.articleSommaire, ul.articleSommaire, .articleSommaire a, .articleSommaire a:v
     margin: 0 0 5px 5px;
 }
 
+.survol{
+    transition: transform 1s, 
+                box-shadow 1s ease 5s,
+                border-radius 0.5s ease;
+}
+
+.survol:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 20px #333;
+    border-radius: 10px;
+}
+
+.rotation{
+    transition: transform 1s;
+}
+
+.rotation:hover{
+    transform: rotate(180deg);
+}
+
+.translation{
+    transition: transform .5s;
+}
+
+.translation:hover{
+    transform: translate(30px, -20px);
+}
+
+.rectangle{
+    width: 200px;
+    height: 200px;
+    background-color: darkred;
+    opacity: 0.5;
+}
+
+.animation{
+    position: absolute;
+    animation: carreQuiBouge 3s infinite;
+}
+
+@keyframes carreQuiBouge{
+    0%{
+        transform: rotate(0deg);
+        left: 20vw;
+    }
+    5%{
+        transform: rotate(45deg);
+        left: 20vw;
+    }
+    50%{
+        left: 70vw;
+        transform: rotate(90deg);
+    }
+    60%{
+        left: 70vw;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 20vw;
+    }
+}
+
 /* styiliser un élément en utilisant le sélecteur id de cet élément*/
 /*
 #sommaire{
