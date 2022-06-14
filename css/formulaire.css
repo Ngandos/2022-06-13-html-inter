@@ -1,0 +1,146 @@
+p.buttonForm{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+form {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  border: 1px solid var(--link-nav-color);
+  box-shadow: 0 0 5px var(--bg-header);
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+fieldset legend {
+  border: 1px solid var(--bg-header);
+  border-radius: 50px;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding: 5px 15px;
+  background-color: var(--link-nav-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+fieldset p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+fieldset textarea {
+  height: 100px;
+  width: 100%;
+}
+
+fieldset p label,
+fieldset p input[type="text"],
+fieldset p input[type="email"],
+fieldset p input[type="url"],
+fieldset p input[type="tel"],
+fieldset p input[type="number"],
+fieldset p select {
+  width: 100%;
+  height: 1.5rem;
+}
+
+#rangeEnLevel {
+  margin-top: 15px;
+}
+
+fieldset input[type="range"]#enLevel {
+  margin-top: 15px;
+  width: calc(100% - 50px);
+  height: 1.5rem;
+}
+
+p.grpmCB {
+  justify-content: center;
+}
+
+p.grpmCB label {
+  width: 60%;
+}
+
+p.grpmCB input {
+  width: 20%;
+}
+
+form p button {
+  border: 1px solid var(--bg-header);
+  border-radius: 50px;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 0 5px var(--bg-header);
+  width: 200px;
+  margin: 5px;
+}
+
+form p button[type=submit]{
+    background-color: var(--button-valid);
+}
+
+form p button[type=submit]:hover,
+form p button[type=submit]:focus{
+    background-color: var(--main-bg-rgba);
+    color: var(--button-valid);
+}
+
+form p button[type=reset]{
+    background-color: var(--button-reset);
+}
+
+form p button[type=reset]:hover,
+form p button[type=reset]:focus{
+    background-color: var(--main-bg-rgba);
+}
+
+@media (min-width: 576px) {
+  fieldset p label {
+    width: 30%;
+  }
+
+  fieldset p input[type="text"],
+  fieldset p input[type="email"],
+  fieldset p input[type="url"],
+  fieldset p input[type="tel"],
+  fieldset p input[type="number"],
+  fieldset p select {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  fieldset textarea {
+    height: 100px;
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  form {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1400px) {
+  form {
+    width: 60%;
+  }
+}

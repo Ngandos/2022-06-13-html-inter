@@ -40,6 +40,8 @@ si 2em = 32 px, 1em = 16px
     --width-column-1-2: 50%;
     --footer-ul-border-top: #F2F2F2;
     --sommaire-article-link: var(--link-nav-color);
+    --button-valid: #198754;
+    --button-reset: #ffc107;
 }
 
 /*  
