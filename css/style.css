@@ -171,9 +171,19 @@ ol.articleSommaire, ul.articleSommaire, .articleSommaire a, .articleSommaire a:v
     opacity: 0.5;
 }
 
+/* 
+on déclare une animation sur un élément, 
+et plutôt que d'écrire une animation "simple" directement, 
+on déclare un jeu de @keyframes (images-clefs) qui vont 
+donner les différents états de l'élément sur la durée totale déclarée par animation
+*/
 .animation{
     position: absolute;
     animation: carreQuiBouge 3s infinite;
+    /*
+    on déclare le jeu de @keyframes nommé carreQuiBouge,
+    sa durée, 3secondes, et sa répétition, ici infinie.
+    */
 }
 
 @keyframes carreQuiBouge{
@@ -196,6 +206,28 @@ ol.articleSommaire, ul.articleSommaire, .articleSommaire a, .articleSommaire a:v
     100%{
         left: 20vw;
     }
+}
+
+.tabExemple{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.tabExemple th, .tabExemple td{
+    border: 1px solid var(--bg-header);
+}
+
+.tabExemple th{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tabExemple tbody tr:nth-last-of-type(odd){
+    background-color: rgba(0,0,0, 0.25);
 }
 
 /* styiliser un élément en utilisant le sélecteur id de cet élément*/
