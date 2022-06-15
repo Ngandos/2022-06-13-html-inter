@@ -2,6 +2,11 @@
   font-size: 0.8rem;
   color: var(--bg-header);
   text-align: right;
+  border-radius: 5px;
+  background-color: var(--help-form-color);
+  line-height: 2rem;
+  padding: 5px;
+  border: 1px solid var(--button-valid-faded);
 }
 
 .form-help::after{
@@ -64,7 +69,7 @@ fieldset p input[type="number"],
 fieldset p select {
   width: 100%;
   height: 2rem;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 #rangeEnLevel {

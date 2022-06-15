@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="./css/print.css" media="print" />
     <script>
         console.log('début du chargement de la page');
-        window.addEventListener('DOMContentLoaded', function(){
+        window.addEventListener('DOMContentLoaded', function () {
             console.log('début du script JS');
             /* affichage du niveau d'anglais en page*/
             let enLevel = document.querySelector('#enLevel');
             let rangeEnLevel = document.querySelector('#rangeEnLevel');
-            enLevel.addEventListener('change', function(){
+            enLevel.addEventListener('change', function () {
                 let valueRange = enLevel.value;
                 rangeEnLevel.innerHTML = valueRange;
             });
@@ -32,14 +32,14 @@
             let colorTeam = document.querySelector("#couleurEquipe");
             let spanColorTeam = document.querySelector("#spanColorTeam"); //élément span enLevel
 
-            colorTeam.addEventListener("change", function(){
+            colorTeam.addEventListener("change", function () {
                 spanColorTeam.innerHTML = colorTeam.value;
             });
 
             let dateEquipe = document.querySelector("#dateEquipe");
             let spanDateTeam = document.querySelector("#spanDateTeam"); //élément span enLevel
 
-            dateEquipe.addEventListener("change", function(){
+            dateEquipe.addEventListener("change", function () {
                 spanDateTeam.innerHTML = dateEquipe.value;
             });
         });
@@ -92,32 +92,32 @@
                     </header>
                     <main>
                         <p>
-                            Les formulaires servent a récupérer des informations pour traitement par, par exemple, 
+                            Les formulaires servent a récupérer des informations pour traitement par, par exemple,
                             un serveur php qui pourra les enregistrer en fichier, en bdd, ou les envoyer par mail
                         </p>
                         <p>
-                            Un formulaire se déclare à l'aide de la balise &lt;form&gt;. Il possède des attributs, 
+                            Un formulaire se déclare à l'aide de la balise &lt;form&gt;. Il possède des attributs,
                             dont les plus courants et importants sont : method & action
                         </p>
                         <h3>method</h3>
                         <p>
-                            méthode d'envoi des informations du formulaire, il en existe deux : 
+                            méthode d'envoi des informations du formulaire, il en existe deux :
                         </p>
                         <ul>
-                            <li>GET : les données sont envoyées associées à des 
+                            <li>GET : les données sont envoyées associées à des
                                 noms de variables dans l'url de la page de traitement</li>
-                            <li>POST : Les données sont transmises en variables dans 
+                            <li>POST : Les données sont transmises en variables dans
                                 l'entête HTTP.
                             </li>
                         </ul>
                         <p>
-                            Si la méthode n'est pas indiquée dans le formulaire, 
+                            Si la méthode n'est pas indiquée dans le formulaire,
                             c'est GET qui sera utilisé par défaut
                         </p>
                         <h3>Action</h3>
                         <p>
                             Indique l'url de la page de traitement des données envoyées par le formulaire.
-                            Si action n'est pas précisé, le formulaire considère que c'est la page où il 
+                            Si action n'est pas précisé, le formulaire considère que c'est la page où il
                             se trouve qui sera la page de traitement.
                         </p>
                         <h3>Notre formulaire</h3>
@@ -126,19 +126,15 @@
                                 <legend>Vos coordonnées</legend>
                                 <p>
                                     <label for="nom">Nom : </label>
-                                    <input type="text" name="nom" 
-                                        placeholder="Entrez votre nom" 
-                                        aria-describedby="nomAide" 
-                                        autofocus 
-                                        required />
+                                    <input type="text" name="nom" placeholder="Entrez votre nom"
+                                        aria-describedby="nomAide" autofocus required />
                                 </p>
                                 <div class="form-help" id="nomAide">
                                     Entrez votre nom dans ce champs, il est obligatoire
                                 </div>
                                 <p>
                                     <label for="prenom">Prénom : </label>
-                                    <input type="text" name="prenom" 
-                                        placeholder="Entrez votre prénom" 
+                                    <input type="text" name="prenom" placeholder="Entrez votre prénom"
                                         aria-describedby="prenomAide" />
                                 </p>
                                 <div class="form-help" id="prenomAide">
@@ -146,19 +142,15 @@
                                 </div>
                                 <p>
                                     <label for="email">E-mail : </label>
-                                    <input type="email" name="email" 
-                                        placeholder="Entrez votre e-mail" 
-                                        aria-describedby="emailAide" 
-                                        required
-                                        />
+                                    <input type="email" name="email" placeholder="Entrez votre e-mail"
+                                        aria-describedby="emailAide" required />
                                 </p>
                                 <div class="form-help" id="emailAide">
                                     Entrez votre e-mail dans ce champs, il est obligatoire
                                 </div>
                                 <p>
                                     <label for="url">Site web : </label>
-                                    <input type="url" name="url" 
-                                        placeholder="Entrez l'adresse de votre site web" 
+                                    <input type="url" name="url" placeholder="Entrez l'adresse de votre site web"
                                         aria-describedby="urlAide" />
                                 </p>
                                 <div class="form-help" id="urlAide">
@@ -166,8 +158,7 @@
                                 </div>
                                 <p>
                                     <label for="tel">Téléphone : </label>
-                                    <input type="tel" name="tel" 
-                                        placeholder="Entrez votre téléphone" 
+                                    <input type="tel" name="tel" placeholder="Entrez votre téléphone"
                                         aria-describedby="telAide" />
                                 </p>
                                 <div class="form-help" id="telAide">
@@ -182,26 +173,24 @@
                                     <label for="description">
                                         Décrivez-vous :
                                     </label>
-                                    <textarea name="description" 
-                                    placeholder="Décrivez vous" 
-                                    ></textarea>
+                                    <textarea name="description" placeholder="Décrivez vous"></textarea>
                                 </p>
                                 <p>
                                     <label for="fratrie">Nombre de frères et soeurs :</label>
-                                    <input type="number" name="fratrie" 
-                                    aria-describedby="fratrieAide" 
-                                    min="0" max="20" value="0" step="1"/>
+                                    <input type="number" name="fratrie" aria-describedby="fratrieAide" min="0" max="20"
+                                        value="0" step="1" />
                                 </p>
-                                <div class="form-help" id="fratrieAide">Entrez la quantité de frère(s) 
-                                    et soeur(s) dans ce champ</div>
+                                <div class="form-help" id="fratrieAide">Entrez la quantité de frère(s)
+                                    et soeur(s) dans ce champ
+                                </div>
                                 <p>
                                     <label for="enLevel">Votre niveau d'angais</label>
-                                    <input type="range" id="enLevel" name="enLevel" 
-                                    aria-describedby="enLevelAide" 
-                                    min="0" max="20" value="10" step="0.5"/>
+                                    <input type="range" id="enLevel" name="enLevel" aria-describedby="enLevelAide"
+                                        min="0" max="20" value="10" step="0.5" />
                                     <span id="rangeEnLevel" class="showEnLevel">10</span>
                                 </p>
-                                <div class="form-help" id="enLevelAide">Entrez votre niveau d'anglais dans ce champ</div>
+                                <div class="form-help" id="enLevelAide">Entrez votre niveau d'anglais dans ce champ
+                                </div>
                             </fieldset>
                             <fieldset>
                                 <legend>
@@ -210,50 +199,55 @@
                                 <p>
                                     <label for="couleurEquipe">Couleur de votre équipe :</label>
                                     <input type="color" name="couleurEquipe" id="couleurEquipe"
-                                    aria-describedby="couleurEquipeAide" />
+                                        aria-describedby="couleurEquipeAide" />
                                     <span id="spanColorTeam">#000000</span>
                                 </p>
-                                <div class="form-help" id="couleurEquipeAide">Choisissez la couleut de 
-                                    votre équipe en cliquant dans ce champs</div>
+                                <div class="form-help" id="couleurEquipeAide">Choisissez la couleut de
+                                    votre équipe en cliquant dans ce champs
+                                </div>
                                 <p>
                                     <label for="dateEquipe">Date création de l'équipe :</label>
                                     <input type="date" name="dateEquipe" id="dateEquipe"
-                                    aria-describedby="dateEquipeAide" />
+                                        aria-describedby="dateEquipeAide" />
                                     <span id="spanDateTeam"></span>
                                 </p>
-                                <div class="form-help" id="dateEquipeAide">indiquez la date de création de 
+                                <div class="form-help" id="dateEquipeAide">indiquez la date de création de
                                     l'équipe dans ce champs</div>
                                 <p>
                                     Cochez les capacités spéciales de votre équipe (plusieurs choix possible)
                                 </p>
                                 <p class="grpmCB">
-                                    <input type="checkbox" name="agilite" />
+                                    <input type="checkbox" name="agilite" aria-describedby="competenceEquipeAide" />
                                     <label for="agilite">Agilité</label>
-                                    <input type="checkbox" name="force" />
+                                    <input type="checkbox" name="force" aria-describedby="competenceEquipeAide" />
                                     <label for="force">Force</label>
-                                    <input type="checkbox" name="sagesse" />
+                                    <input type="checkbox" name="sagesse" aria-describedby="competenceEquipeAide" />
                                     <label for="sagesse">Sagesse</label>
-                                    <input type="checkbox" name="intelligence" />
+                                    <input type="checkbox" name="intelligence" aria-describedby="competenceEquipeAide" />
                                     <label for="intelligence">Intelligence</label>
                                 </p>
+                                <div class="form-help" id="competenceEquipeAide">
+                                    Cochez les capacités spéciales de votre équipe.
+                                </div>
                                 <p>
                                     Veuillez indique votre tranche tranche d'âge :
                                 </p>
                                 <p class="grpmCB">
-                                    <input type="radio" name="age" value="moins15" 
-                                    checked 
-                                    aria-describedby="moins15" />
+                                    <input type="radio" name="age" value="moins15" checked aria-describedby="moins15"  aria-describedby="votreAgeAide" />
                                     <label id="moins15">Moins de 15 and</label>
-                                    <input type="radio" name="age" value="medium15-25" aria-describedby="medium15-25" />
+                                    <input type="radio" name="age" value="medium15-25" aria-describedby="medium15-25" aria-describedby="votreAgeAide" />
                                     <label id="medium15-25">15 - 25 ans</label>
-                                    <input type="radio" name="age" value="medium26-40" aria-describedby="medium26-40" />
+                                    <input type="radio" name="age" value="medium26-40" aria-describedby="medium26-40" aria-describedby="votreAgeAide" />
                                     <label id="medium26-40">26 - 40 ans</label>
-                                    <input type="radio" name="age" value="plus40" aria-describedby="plus40" />
+                                    <input type="radio" name="age" value="plus40" aria-describedby="plus40" aria-describedby="votreAgeAide" />
                                     <label id="plus40">Plus de 40 ans</label>
                                 </p>
+                                <div class="form-help" id="votreAgeAide">
+                                    Cochez les capacités spéciales de votre équipe.
+                                </div>
                                 <p>
                                     <label for="specialite">Spécialisation de l'équipe</label>
-                                    <select name="specialite">
+                                    <select name="specialite" aria-describedby="speEquipeAide">
                                         <option value="" selected>
                                             Choisissez une spécialité
                                         </option>
@@ -276,6 +270,9 @@
                                             </option>
                                         </optgroup>
                                     </select>
+                                    <div class="form-help" id="speEquipeAide">
+                                        Sélectionnez la spécialité de votre équipe.
+                                    </div>
                                 </p>
                             </fieldset>
                             <p class="buttonForm">
@@ -356,4 +353,5 @@
 <script>
     console.log('fin du chargement de la page');
 </script>
+
 </html>

@@ -41,6 +41,8 @@ si 2em = 32 px, 1em = 16px
     --footer-ul-border-top: #F2F2F2;
     --sommaire-article-link: var(--link-nav-color);
     --button-valid: #198754;
+    --button-valid-faded: #89bda5;
+    --help-form-color: rgba(25, 135, 84, 0.2);
     --button-reset: #ffc107;
 }
 
