@@ -1,0 +1,178 @@
+.rubanWrapper{
+    margin: 20px 30px;
+    height: 100px;
+}
+
+.ruban{
+    width: 20%;
+    position: absolute;
+    text-align: center;
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 2px;
+    z-index: 2;
+}
+
+.ruban::before, .ruban::after{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1rem;
+    border: 1.5rem solid red;
+    z-index: -1;
+}
+
+.ruban::before{
+    left: -2rem;
+    border-right-width: 1.5rem;
+    border-left-color: transparent;
+}
+
+.ruban::after{
+    right: -2rem;
+    border-left-width: 1.5rem;
+    border-right-color: transparent;
+}
+
+.ruban .ruban-contenu::before, .ruban .ruban-contenu::after{
+    border-color: darkred transparent transparent transparent;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    bottom: -1rem;
+    content: "";
+}
+
+.ruban .ruban-contenu::before{
+    left: 0;
+    border-width: 1rem 0 0 1rem;
+}
+
+.ruban .ruban-contenu::after{
+    right: 0;
+    border-width: 1rem 1rem 0 0;
+}
+
+.badge{
+    width: 338px;
+    height: 338px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgBg{
+    width: 338px;
+    height: 338px;
+    background: url("../images/superposition/logo-pt1.png");
+    position: absolute;
+    z-index: 2;
+}
+
+.imgMg{
+    width: 338px;
+    height: 338px;
+    background: url("../images/superposition/logo-pt2.png");
+    position: absolute;
+    z-index: 3;
+}
+
+.imgFg{
+    width: 338px;
+    height: 338px;
+    background: url("../images/superposition/logo-pt3.png");
+    position: absolute;
+    z-index: 4;
+}
+
+.triangle-rouge{
+    width: 0;
+    height: 0;
+    border-left-width: 1rem;
+    border-right-width: 0;
+    border-top-width: 0.66rem;
+    border-bottom-width: 0.66rem;
+    border-style: solid;
+    border-color: transparent transparent transparent darkred;
+}
+
+.intro::before{
+    width: 0;
+    height: 0;
+    border-left: 10px solid darkred;
+    border-right-width: 0;
+    border-top: 0.35rem solid transparent;
+    border-bottom: 0.35rem solid transparent;
+    display: inline-block;
+    content: "";
+}
+
+#pixel-truc{
+    margin: 70px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 5px red,
+    0 0 0 10px red,
+    0 10px 0 10px red,
+    -25px 15px 0 5px red,
+    25px 15px 0 5px red,
+    -30px -30px 0 0 red,
+    30px -30px 0 0 red,
+    -20px -20px 0 0 red,
+    20px -20px 0 0 red,
+    -30px -10px 0 0 red,
+    -20px -10px 0 0 red,
+    20px -10px 0 0 red,
+    30px -10px 0 0 red,
+    -40px 0 0 0 red,
+    -30px 0 0 0 red,
+    30px 0 0 0 red,
+    40px 0 0 0 red,
+    -50px 10px 0 0 red,
+    -40px 10px 0 0 red,
+    40px 10px 0 0 red,
+    50px 10px 0 0 red,
+    -50px 20px 0 0 red,
+    50px 20px 0 0 red,
+    -50px 30px 0 0 red,
+    -30px 30px 0 0 red,
+    30px 30px 0 0 red,
+    50px 30px 0 0 red,
+    -20px 40px 0 0 red,
+    -10px 40px 0 0 red,
+    10px 40px 0 0 red,
+    20px 40px 0 0 red;
+}
+
+.big-box{
+    height: 250px;
+    width: 250px;
+    border: 3px solid darkcyan;
+    position: relative;
+    /*
+    en mettant une position relative au parent,
+    on peut mettre l'enfant en "absolute" sans que 
+    son positionnement "sorte" du cadre parent
+    */
+}
+
+.div-rouge{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(139, 0, 0, 0.50);
+    position: relative;
+    /* la "consistence" - la "place" occupée par le bloc est 
+    présent pour les autres blocs qui ne sont pas en absolute */
+    top: 20px;
+    z-index: 1;
+}
+
+.div-verte{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 100, 0, 0.50);
+    position: absolute;
+    /* la "consistence" - la "place" occupée par le bloc est 
+    présent pour les autres blocs qui ne sont pas en absolute */
+    top: 35px;
+    left: 20px;
+}

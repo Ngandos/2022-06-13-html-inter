@@ -14,6 +14,7 @@
         </style>
     -->
     <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/css-pratique.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
 </head>
 
@@ -52,6 +53,11 @@
                     CSS
                 </a>
             </li>
+            <li>
+                <a href="./exocv.html" title="exercice cv en css">
+                    Exo CV CSS
+                </a>
+            </li>
         </ul>
     </nav>
     <main class="container">
@@ -62,8 +68,107 @@
                         <h2>Du CSS pratique</h2>
                     </header>
                     <main>
-
+                        <div class="rubanWrapper">
+                            <div class="ruban">
+                                <div class="ruban-contenu">
+                                    <h3>Un titre dans un ruban</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="triangle-rouge"></div>
+                        <h3>Images superposées</h3>
+                        <figure class="left">
+                            <div class="badge">
+                                <div class="imgFg"></div>
+                                <div class="imgMg"></div>
+                                <div class="imgBg"></div>
+                            </div>
+                        </figure>
+                        <p class="intro">
+                            Batman contre le Fantôme Masqué ou Batman:
+                            Le Masque du Phantasme1 au Québec (Batman:
+                            Mask of the Phantasm) est un film d'animation
+                            américain réalisé par Eric Radomski et Bruce
+                            Timm, sorti en 1993. Il est scénarisé par Alan
+                            Burnett et Paul Dini, et produit par la Warner
+                            Bros. C'est un film dérivé de la série télévisée
+                            Batman, la série animée.
+                        </p>
+                        <h3>Synopsis</h3>
+                        <p class="intro">
+                            <span></span>Plusieurs chefs de la pègre locale sont décédés
+                            à la suite d'attentats perpétrés par une silhouette
+                            fantomatique qui rôde à Gotham City. Alors que les
+                            autorités de la ville accusent Batman de ces meurtres,
+                            Bruce Wayne doit affronter son passé émotionnel quand
+                            son ex-fiancée, Andréa Beaumont, revient d'Europe.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Repudiandae consequatur harum suscipit necessitatibus
+                            maiores distinctio voluptates ut. Eaque, neque, commodi
+                            voluptatem fugit totam sequi, alias quidem dolorum iusto
+                            laborum temporibus.
+                        </p>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Distinctio, officia nam! Ipsam voluptas dolores delectus
+                            quod debitis totam iusto corporis velit, quam id, doloremque
+                            laboriosam asperiores culpa cum mollitia officia.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Ullam saepe veniam fugit. Quas earum delectus corrupti.
+                            Ratione, eveniet inventore doloremque nulla ab, ducimus
+                            nihil quia autem, voluptas dolore earum aspernatur.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dicta laboriosam, eaque eveniet enim rerum quo reprehenderit
+                            nobis eligendi nihil facilis adipisci velit beatae aut ullam
+                            tempora sit rem. Repellendus, debitis.
+                        </p>
+                        <h3>Créer des formes en CSS</h3>
+                        <div id="pixel-truc"></div>
                     </main>
+                </div>
+                <h3>Target dans les liens</h3>
+                <p>
+                    &lt;a href="" target="_self"&gt;<br />
+                    &lt;a href="" target="_blank"&gt;<br />
+                    &lt;a href="" target="_parent"&gt;<br />
+                    &lt;a href="" target="_top"&gt;<br />
+                </p>
+                <p>
+                    4 type de target :
+                </p>
+                <ul>
+                    <li>_blank : nouvelle fenêtre et / ou nouvel onglet</li>
+                    <li>_self : dans le même <q>cadre</q>, dans la même page,
+                        comportement par défaut d'un lien </li>
+                    <li>_parent : dans le <q>cadre</q> parent, le document - la page qui
+                        contient la page qui possède le lien</li>
+                    <li>_top : dans le <q>cadre</q> parent le plus "haut", le document - la page qui
+                        contient les pages dont celle qui possède le lien</li>
+                </ul>
+                <p>
+                    <a href="./article.html" target="iframeTest">Appeler l'article dans l'iframe</a>
+                    </p>
+                    <p>
+                    <a href="./css.html" target="iframeTest">Appeler cette page dans l'iframe</a>
+                </p>
+                <p>
+                    <a href="./css.html" target="_top">Appeler cette page en top</a>
+                </p>
+                <iframe name="iframeTest" width="80%" height="300px" src="./iframe.html"></iframe>
+                <div class="big-box">
+                    <div class="div-rouge">
+                        div rouge
+                    </div>
+                    <div class="div-verte">
+                        Div verte
+                    </div>
+                    Big box après les div
                 </div>
             </article>
         </section>
