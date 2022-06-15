@@ -44,6 +44,8 @@ si 2em = 32 px, 1em = 16px
     --button-valid-faded: #89bda5;
     --help-form-color: rgba(25, 135, 84, 0.2);
     --button-reset: #ffc107;
+    --grid-div-border: rgb(60, 90, 172);
+    --grid-div-bg: rgba(60, 90, 172, 0.5);
 }
 
 /*  
