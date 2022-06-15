@@ -10,9 +10,7 @@
 }
 
 .form-help::after{
-  font-family: 'Font Awesome 6 free';
   font-family: var(--fa-style-family, "Font Awesome 6 free");
-  font-weight: 900;
   font-weight: var(--fa-style, 900);
   content: " \f059";
 }

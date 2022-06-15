@@ -301,6 +301,8 @@ body>nav>ul {
     justify-content: space-between; /* permet de justifier l'affichage des éléments à l'intérieur du conteneur */
     flex-wrap: wrap; /* si la largeur des conteneur mis côte à côté "dépasse" la largeur du conteneur, les éléments sont mis à la ligne */
     line-height: 2rem;
+    padding-left: 0!important;
+    padding-right: 0!important;
 }
 
 body>nav>ul li a {
@@ -366,7 +368,7 @@ body > footer div > ul{
 
 body > footer div > ul a{
     display: block;
-    padding-left: 10vw;
+    padding-left: 5vw;
 }
 
 h1,
