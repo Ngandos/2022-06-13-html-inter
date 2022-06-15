@@ -1,0 +1,90 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  --couleur-texte-generale: #000;
+  font-size: 1rem;
+  --bg-header: #222126;
+  --jaune-logo: #f2c438;
+  --orange-logo: #f2b544;
+  --gris-leger: #f2f2f2;
+  --bg-main-rgba: rgba(242, 242, 242, 0.8);
+  /*box-sizing: border-box;*/ /* déclarer le box-sizing dans root */
+}
+
+/* polices particulières */
+@font-face {
+  font-family: "Arkham_reg";
+  src: url("../fonts/Arkham_reg.eot");
+  src: url("../fonts/Arkham_reg.eot") format("embedded-opentype"),
+    url("../fonts/Arkham_reg.woff2") format("woff2"),
+    url("../fonts/Arkham_reg.woff") format("woff"),
+    url("../fonts/Arkham_reg.ttf") format("truetype"),
+    url("../fonts/Arkham_reg.svg#Arkham_reg") format("svg");
+}
+
+.btn {
+  border-radius: 150px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-batman {
+  color: var(--bg-header);
+  background-color: var(--orange-logo);
+  border-color: var(--bg-header);
+}
+
+.btn-batman:hover {
+  color: #fff;
+  background-color: var(--bg-header);
+  border-color: #0a58ca;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: var(--jaune-logo) !important;
+  font-family: "Arkham_reg";
+}
+
+video {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+iframe {
+  width: 100%;
+}
+
+figure.videoExt {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.videoExt iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--jaune-logo);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--orange-logo);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--orange-logo);
+}
+
+.text-jaune-logo {
+  color: var(--jaune-logo);
+}

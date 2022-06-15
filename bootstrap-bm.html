@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/bs-bm-style.css" />
+
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="row">
+                <a class="navbar-brand col-sm-4" href="./">
+                    <div class="row">
+                        <img class="img-fluid col-4" 
+                        class="" src="./images/logo-batman.svg" />
+                        <h1 class="col-8">Bootstrap</h1>
+                    </div>
+                </a>
+                <div class="col-sm-7 text-end">
+                    <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" 
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./" 
+                                title="Retourner à l'accueil du site">
+                                    Accueil
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./article.html" 
+                                title="Afficher un article">
+                                    Bruce Timm
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./formulaire.html" 
+                                title="Retourner à l'accueil du site">
+                                    Contact
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./css.html" 
+                                title="Retourner à l'accueil du site">
+                                    CSS
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./gridcss.html" 
+                                title="Retourner à l'accueil du site">
+                                    CSS GRID
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./bootstrap.html" 
+                                title="Retourner à l'accueil du site">
+                                    Bootstrap
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                                    role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    CV
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="./cv.html" 
+                                            title="Retourner à l'accueil du site">
+                                            Exo CV
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="./cv-debug.html"
+                                            title="Retourner à l'accueil du site">
+                                            Test grid
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="row">
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>Problèmes CSS courants</h2>
+                    </header>
+                    <main>
+                        <p>
+                            Le calcul par défaut des tailles en CSS est content-box,
+                            il est conseillé de le passer en border-box
+                        </p>
+                        <p>
+                            Les tailles calculées : si vous voulez utiliser des cadratin (em),
+                            il est plus sûr d'utiliser les cadratins racine (rem) car il sont toujours
+                            calculés par rapport au cadratin racine du user stylesheet
+                            et non pas le cadratin calculé du conteneur.
+                        </p>
+                        <h3>Les polices de caractère</h3>
+                        <p>
+                            On utilisera les propriétés @font-face pour déclarer en CSS une police
+                            de caractère dont les fichiers (eot, svg, ttf, woff, woff2) sont hébergés
+                            sur le site pour ne pas forcer l'utilsateur à télécharger et installer des fichiers
+                            qui sont peut-être corrompus ou porteur de virus.
+                        </p>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>HTML -CSS sur le texte</h2>
+                    </header>
+                    <main>
+                        <p>
+                            Il existe quelques balises pour changer directement l'affichage
+                            du texte en HTML. Un texte <b>en gras</b>, qui n'a pas d'incidence sur
+                            le SEO, <strong>le texte en gras</strong> qui lui à de l'incidence sur le SEO.
+                        </p>
+                        <p>
+                            Il en est de même pour l'italique : <i>Italique à l'affichage</i>, Italique
+                            afficher avec une <em>emphase sémantique</em>
+                        </p>
+                        <p>
+                            la balise font <font color="#ff0000">texte</font> n'est plus utilisée.
+                            Maintenant on va généralement
+                            <span class="truc">utliser</span> une balise <span class="rouge-gras">span associée à une
+                                classe</span>.
+                        </p>
+                        <p>
+                            <quote>
+                                <q>I'm Batman</q><br />
+                                <i>Batman</i>
+                            </quote>
+                        </p>
+                        <blockquote>
+                            <q>I'm Batman</q><br />
+                            <i>Batman</i> <i class="fas fa-mask"></i>
+                        </blockquote>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>HTML - CSS sur le texte</h2>
+                    </header>
+                    <main>
+                        <pre>
+Lorem ipsum dolor<br />sit amet consectetur 
+adipisicing elit.
+Placeat sit maxime velit nostrum rem!&lt;br /&gt; 
+Eos in alias vel a, corporis
+quas ea hic sunt beatae itaque totam, 
+blanditiis exercitationem nostrum.
+                        </pre>
+                        <code>
+                            Lorem ipsum, dolor sit <br />amet consectetur adipisicing elit. Necessitatibus
+                            libero perferendis quaerat maiores quisquam natus? Sunt, molestiae iste ipsam
+                            necessitatibus fuga sapiente, &lt;recusandae&gt; doloribus consectetur odio similique
+                            rem, reiciendis velit!
+                        </code>
+                        <p>
+                            H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                        </p>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>Plusieurs feuilles de style</h2>
+                    </header>
+                    <main>
+                        <p>
+                            On peut avoir deux feuilles de style pour la même page :
+                            une qui servira à l'affichage sur écran, et l'autre qui
+                            servira à l'impression de cette page.
+                        </p>
+                        <p>
+                            Il suffit alors de préciser les éléments de la page
+                            qu'on ne désir pas voir apparaître lors de l'impression.
+                        </p>
+                        <p>
+                            Il est possible sur le navigateur d'avoir un aperçu de l'impression :
+                            dans la console, faire ctrl + maj + p, puis d'écrire print
+                            et de sélectionner l'émulation du media print à l'écran
+                        </p>
+                        <p>
+                            pour revenir en arrière, même méthode mais en écrivant screen
+                            et en sélectionnant l'émulation du média screen.
+                        </p>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>Images avec figure</h2>
+                    </header>
+                    <main>
+                        <figure>
+                            <img class="img-fluid" src="./images/cover-dvd-batman.jpg"
+                                alt="Jaquette du DVD Batman the animated series"
+                                title="Jaquette du DVD Batman the animated series" />
+                            <figcaption>
+                                Jaquette du DVD Batman the animated series
+                            </figcaption>
+                        </figure>
+                        <p>
+                            La balise IMG va servir à intégrer directement les image, mais
+                            en utilisant figure il est possible de l'enrichir sémantiquement
+                            avec une légende, et surtout de styliser figure afin d'avoir
+                            une présentation d'image particulière.
+                        </p>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>Image avec img</h2>
+                    </header>
+                    <main>
+                        <p>
+                            On peut directement ajouter avec img, on va préférer cela quand l'image
+                            va servir de décor ou si elle ne nécessite aucun style de présentation
+                            particulier.
+                        </p>
+                        <img class="img-fluid" src="./images/skeletor-poster-masters-of-the-universe.jpg"
+                            alt="Poster de Skeletor Master of the universe par James White"
+                            title="Poster de Skeletor Master of the universe par James White" />
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>Incrustation de vidéos</h2>
+                    </header>
+                    <main>
+                        <figure>
+                            <video controls preload="auto"
+                                poster="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg">
+                                <source src="./media/Fallout-4-Launch-Trailer.mp4" type="video/mp4" />
+                            </video>
+                            <figcaption>
+                                Vidéo de l'annonce de la sortie de Fallout 4
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <video controls preload="auto">
+                                <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                                <source src="./media/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                            </video>
+                            <figcaption>
+                                Vidéo test big buck bunny
+                            </figcaption>
+                        </figure>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>Vidéos hébergés par un tier</h2>
+                    </header>
+                    <main>
+                        <p>
+                            Des sites tels que Youtube et dailymotion donne la possibilité
+                            d'incruster leurs vidéos sur nos sites, en utilisant la balise iframe.
+                        </p>
+                        <p>
+                            L'iframe est une v=balise qui permet d'appeler une page
+                            d'un autre site (ou du site actuel) dans un cadre délimité.
+                        </p>
+                        <p>
+                            Il faut toutefois que le site ciblé autorise les iframes
+                        </p>
+                        <iframe src="./test.html" width="100%" height="200"></iframe>
+                        <iframe src="./documents/CRAM.pdf" width="100%" height="200"></iframe>
+                        <figure class="videoExt">
+                            <iframe src="https://www.youtube.com/embed/1H5g4Mh-G6I" frameborder="0"
+                                allowfullscreen></iframe>
+                        </figure>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-md-6 col-xl-4 mb-2">
+                <div>
+                    <header>
+                        <h2>iframe vidéo</h2>
+                    </header>
+                    <main>
+                        <figure class="videoExt">
+                            <iframe frameborder="0" type="text/html"
+                                src="https://www.dailymotion.com/embed/video/xxkxw?autoplay=1" allowfullscreen></iframe>
+                        </figure>
+                        <figure>
+                            <img class="img-fluid" src="./images/diablo_02.jpg" />
+                            <figcaption>
+                                <audio controls>
+                                    <source src="./media/diablo_town.mp3" type="audio/mp3" />
+                                </audio>
+                            </figcaption>
+                        </figure>
+                    </main>
+                </div>
+                <footer class="text-center mt-2">
+                    <a href="#">
+                        <button class="btn btn-batman">
+                            Lire la suite
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer class="footer mt-auto py-3 bg-dark text-jaune-logo">
+        <div class="container">
+          <span>&copy; Nicolas Duflot 10/2021 & Bootstrap 5.1.3</span>
+        </div>
+      </footer>
+</body>
+
+</html>
