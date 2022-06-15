@@ -1,6 +1,6 @@
 p.buttonForm{
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-between;
     flex-wrap: wrap;
 }
 
@@ -11,10 +11,11 @@ form {
 }
 
 fieldset {
-  border: 1px solid var(--link-nav-color);
-  box-shadow: 0 0 5px var(--bg-header);
+  border: 3px solid var(--link-nav-color);
+  /*box-shadow: 0 0 5px var(--bg-header);*/
   margin-bottom: 20px;
   border-radius: 5px;
+  background-color: var(--main-bg-rgba);
 }
 
 fieldset legend {
@@ -48,7 +49,8 @@ fieldset p input[type="tel"],
 fieldset p input[type="number"],
 fieldset p select {
   width: 100%;
-  height: 1.5rem;
+  height: 2rem;
+  border-radius: 2px;
 }
 
 #rangeEnLevel {
